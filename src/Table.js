@@ -6,6 +6,7 @@ function Table({ vetor }) {
                     <th>#</th>
                     <th>Nome</th>
                     <th>Marca</th>
+                    <th>Selecionar</th>
                     
                 </tr>
             </thead>
@@ -17,6 +18,7 @@ function Table({ vetor }) {
                             <td>{index + 1}</td>
                             <td>{element.nome}</td>
                             <td>{element.marca}</td>
+                            <td><button className="btn btn-success">Selecionar</button></td>
                         </tr>
                     ))
                 }

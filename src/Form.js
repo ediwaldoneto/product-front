@@ -1,13 +1,13 @@
-function Form({ botao }) {
+function Form({ botao, eventKeys, cadastrar, obj}) {
     return (
         <form>
-            <input type='text' placeholder='Nome' className="form-control" />
-            <input type='text' placeholder='Marca' className="form-control" />
+            <input type='text' value={obj.nome} onChange={eventKeys} name='nome' placeholder='Nome'  className='form-control' />
+            <input type='text' value={obj.marca} onChange={eventKeys} name='marca' placeholder='Marca' className='form-control' />
 
             {
                 botao
                     ?
-                    <input type='button' value='Cadastrar' className="btn btn-primary" />
+                    <input type='button' value='Cadastrar' onClick={cadastrar} className='btn btn-primary' />
                     :
                     <div>
                         <input type='button' value='Alterar' className="btn btn-warning" />
